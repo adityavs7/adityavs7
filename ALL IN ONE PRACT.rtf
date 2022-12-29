@@ -1,0 +1,1383 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fmodern\fprq1\fcharset0 Consolas;}{\f2\froman\fprq2\fcharset0 Times New Roman;}{\f3\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red36\green41\blue47;\red32\green32\blue32;\red255\green255\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\widctlpar\sa160\sl252\slmult1\f0\fs44\lang16393 a2 DML\fs22\par
+\f1\fs18 mysql> CREATE DATABASE dat_b;\par
+Query OK, 1 row affected (1.28 sec)\par
+mysql> use dat_b;\par
+Database changed\par
+mysql> create table EMPLOYEE(emp_id int(10),ename varchar(20),addr varchar(50),job_stat varchar(50),basic_sal int(20),constraint EMPLOYEE_pk primary key(emp_id));\par
+Query OK, 0 rows affected, 2 warnings (1.53 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0001, 'Clark','pune', 'professor',50000);\par
+Query OK, 1 row affected (0.99 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0002, 'Dave','mumbai','Clerk   ',2500);\par
+Query OK, 1 row affected (0.05 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0003, 'Ava', 'nashik','professor',75000);\par
+Query OK, 1 row affected (0.01 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0004, 'Eva', 'pune','research mgr',45000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0005, 'Avan', 'pune','research an',60000);\par
+Query OK, 1 row affected (0.02 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0006, 'Evan', 'mumbai','professor',70000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0007, 'Aiden', 'nashik','research worker',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0008, 'P.Gupta','pune', 'professor',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0009, 'Ethan','mumbai','Clerk   ',2500);\par
+Query OK, 1 row affected (0.02 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0010, 'stefan', 'nashik','professor',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0011, 'parth', 'pune','research mg',20000);\par
+Query OK, 1 row affected (0.04 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0012, 'Adhvik', 'pune','research an',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0013, 'Omkar', 'mumbai','professor',20000);\par
+Query OK, 1 row affected (0.04 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0014, 'Ankur', 'nashik','research worker',40000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0015, 'Swetha','pune', 'professor',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0016, 'Shruti','mumbai','Clerk  ',2500);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0017, 'Raj', 'nashik','professor',20000);\par
+Query OK, 1 row affected (0.04 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0018, 'kshitij', 'pune','research mg',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0019, 'HArry', 'pune','research an',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0020, 'Krishna', 'mumbai','professor',20000);\par
+Query OK, 1 row affected (0.03 sec)\par
+\par
+mysql> INSERT INTO EMPLOYEE VALUES (0021, 'Elaine', 'nashik','research worker',20000);\par
+Query OK, 1 row affected (0.04 sec)\par
+\par
+mysql> SELECT * FROM EMPLOYEE;\par
++--------+---------+--------+-----------------+-----------+\par
+| emp_id | ename   | addr   | job_stat        | basic_sal |\par
++--------+---------+--------+-----------------+-----------+\par
+|      1 | Clark   | pune   | professor       |     50000 |\par
+|      2 | Dave    | mumbai | Clerk           |      2500 |\par
+|      3 | Ava     | nashik | professor       |     75000 |\par
+|      4 | Eva     | pune   | research mgr    |     45000 |\par
+|      5 | Avan    | pune   | research an     |     60000 |\par
+|      6 | Evan    | mumbai | professor       |     70000 |\par
+|      7 | Aiden   | nashik | research worker |     20000 |\par
+|      8 | P.Gupta | pune   | professor       |     20000 |\par
+|      9 | Ethan   | mumbai | Clerk           |      2500 |\par
+|     10 | stefan  | nashik | professor       |     20000 |\par
+|     11 | parth   | pune   | research mg     |     20000 |\par
+|     12 | Adhvik  | pune   | research an     |     20000 |\par
+|     13 | Omkar   | mumbai | professor       |     20000 |\par
+|     14 | Ankur   | nashik | research worker |     40000 |\par
+|     15 | Swetha  | pune   | professor       |     20000 |\par
+|     16 | Shruti  | mumbai | Clerk           |      2500 |\par
+|     17 | Raj     | nashik | professor       |     20000 |\par
+|     18 | kshitij | pune   | research mg     |     20000 |\par
+|     19 | HArry   | pune   | research an     |     20000 |\par
+|     20 | Krishna | mumbai | professor       |     20000 |\par
+|     21 | Elaine  | nashik | research worker |     20000 |\par
++--------+---------+--------+-----------------+-----------+\par
+21 rows in set (0.00 sec)\par
+mysql> SELECT emp_id,basic_sal FROM EMPLOYEE WHERE basic_sal>4000;\par
++--------+-----------+\par
+| emp_id | basic_sal |\par
++--------+-----------+\par
+|      1 |     50000 |\par
+|      3 |     75000 |\par
+|      4 |     45000 |\par
+|      5 |     60000 |\par
+|      6 |     70000 |\par
+|      7 |     20000 |\par
+|      8 |     20000 |\par
+|     10 |     20000 |\par
+|     11 |     20000 |\par
+|     12 |     20000 |\par
+|     13 |     20000 |\par
+|     14 |     40000 |\par
+|     15 |     20000 |\par
+|     17 |     20000 |\par
+|     18 |     20000 |\par
+|     19 |     20000 |\par
+|     20 |     20000 |\par
+|     21 |     20000 |\par
++--------+-----------+\par
+18 rows in set (0.00 sec)\par
+\par
+mysql> SELECT basic_sal,job_stat FROM EMPLOYEE WHERE basic_sal>40000 AND job_stat='professor';\par
++-----------+-----------+\par
+| basic_sal | job_stat  |\par
++-----------+-----------+\par
+|     50000 | professor |\par
+|     75000 | professor |\par
+|     70000 | professor |\par
++-----------+-----------+\par
+3 rows in set (0.00 sec)\par
+mysql> SELECT emp_id, ename FROM EMPLOYEE ORDER BY emp_id desc;\par
++--------+---------+\par
+| emp_id | ename   |\par
++--------+---------+\par
+|     21 | Elaine  |\par
+|     20 | Krishna |\par
+|     19 | HArry   |\par
+|     18 | kshitij |\par
+|     17 | Raj     |\par
+|     16 | Shruti  |\par
+|     15 | Swetha  |\par
+|     14 | Ankur   |\par
+|     13 | Omkar   |\par
+|     12 | Adhvik  |\par
+|     11 | parth   |\par
+|     10 | stefan  |\par
+|      9 | Ethan   |\par
+|      8 | P.Gupta |\par
+|      7 | Aiden   |\par
+|      6 | Evan    |\par
+|      5 | Avan    |\par
+|      4 | Eva     |\par
+|      3 | Ava     |\par
+|      2 | Dave    |\par
+|      1 | Clark   |\par
++--------+---------+\par
+21 rows in set (0.00 sec)\par
+mysql> SELECT emp_id,ename FROM EMPLOYEE WHERE job_stat LIKE 'research%';\par
++--------+---------+\par
+| emp_id | ename   |\par
++--------+---------+\par
+|      4 | Eva     |\par
+|      5 | Avan    |\par
+|      7 | Aiden   |\par
+|     11 | parth   |\par
+|     12 | Adhvik  |\par
+|     14 | Ankur   |\par
+|     18 | kshitij |\par
+|     19 | HArry   |\par
+|     21 | Elaine  |\par
++--------+---------+\par
+9 rows in set (0.00 sec)\par
+mysql> SELECT emp_id,ename FROM EMPLOYEE WHERE MOD(emp_id,2)=1;\par
++--------+--------+\par
+| emp_id | ename  |\par
++--------+--------+\par
+|      1 | Clark  |\par
+|      3 | Ava    |\par
+|      5 | Avan   |\par
+|      7 | Aiden  |\par
+|      9 | Ethan  |\par
+|     11 | parth  |\par
+|     13 | Omkar  |\par
+|     15 | Swetha |\par
+|     17 | Raj    |\par
+|     19 | HArry  |\par
+|     21 | Elaine |\par
++--------+--------+\par
+11 rows in set (0.15 sec)\par
+\par
+mysql> SELECT SUM(basic_sal) FROM EMPLOYEE;\par
++----------------+\par
+| SUM(basic_sal) |\par
++----------------+\par
+|         587500 |\par
++----------------+\par
+1 row in set (0.10 sec)\par
+\par
+mysql> SELECT SUM(basic_sal) FROM EMPLOYEE WHERE job_stat='off_assi';\par
++----------------+\par
+| SUM(basic_sal) |\par
++----------------+\par
+|           NULL |\par
++----------------+\par
+1 row in set (0.00 sec)\par
+mysql> SELECT count(ename),job_stat FROM EMPLOYEE group BY job_stat;\par
++--------------+-----------------+\par
+| count(ename) | job_stat        |\par
++--------------+-----------------+\par
+|            9 | professor       |\par
+|            2 | Clerk           |\par
+|            1 | research mgr    |\par
+|            3 | research an     |\par
+|            3 | research worker |\par
+|            2 | research mg     |\par
+|            1 | Clerk           |\par
++--------------+-----------------+\par
+7 rows in set (0.21 sec)\par
+\par
+mysql> SELECT AVG(basic_sal),job_stat FROM EMPLOYEE WHERE job_stat='professor' AND job_stat LIKE 'research%';\par
++----------------+----------+\par
+| AVG(basic_sal) | job_stat |\par
++----------------+----------+\par
+|           NULL | NULL     |\par
++----------------+----------+\par
+1 row in set (0.00 sec)\par
+\par
+mysql> SELECT AVG(basic_sal),job_stat FROM EMPLOYEE WHERE job_stat='professor';\par
++----------------+-----------+\par
+| AVG(basic_sal) | job_stat  |\par
++----------------+-----------+\par
+|     35000.0000 | professor |\par
++----------------+-----------+\par
+1 row in set (0.00 sec)\par
+mysql> SELECT AVG(basic_sal),job_stat FROM EMPLOYEE WHERE job_stat like 'research%';\par
++----------------+--------------+\par
+| AVG(basic_sal) | job_stat     |\par
++----------------+--------------+\par
+|     29444.4444 | research mgr |\par
++----------------+--------------+\par
+1 row in set (0.00 sec)\par
+\par
+mysql> SELECT ename,job_stat FROM EMPLOYEE WHERE job_stat IN (SELECT job_stat FROM EMPLOYEE WHERE ename='P.Gupta');\par
++---------+-----------+\par
+| ename   | job_stat  |\par
++---------+-----------+\par
+| Clark   | professor |\par
+| Ava     | professor |\par
+| Evan    | professor |\par
+| P.Gupta | professor |\par
+| stefan  | professor |\par
+| Omkar   | professor |\par
+| Swetha  | professor |\par
+| Raj     | professor |\par
+| Krishna | professor |\par
++---------+-----------+\par
+9 rows in set (0.12 sec)\par
+\par
+\par
+\par
+\fs96 A3 join\par
+\f0\fs22 Enter password: *******\par
+Welcome to the MySQL monitor.  Commands end with ; or \\g.\par
+Your MySQL connection id is 8\par
+Server version: 8.0.30 MySQL Community Server - GPL\par
+\par
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.\par
+\par
+Oracle is a registered trademark of Oracle Corporation and/or its\par
+affiliates. Other names may be trademarks of their respective\par
+owners.\par
+\par
+Type 'help;' or '\\h' for help. Type '\\c' to clear the current input statement.\par
+\par
+mysql> show databses;\par
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databses' at line 1\par
+mysql> show databases;\par
++--------------------+\par
+| Database           |\par
++--------------------+\par
+| college            |\par
+| information_schema |\par
+| mysql              |\par
+| performance_schema |\par
+| sakila             |\par
+| sys                |\par
+| world              |\par
++--------------------+\par
+7 rows in set (0.27 sec)\par
+\par
+mysql> use college;\par
+Database changed\par
+mysql> use tables;\par
+ERROR 1049 (42000): Unknown database 'tables'\par
+mysql> show tables;\par
++-------------------+\par
+| Tables_in_college |\par
++-------------------+\par
+| emp               |\par
++-------------------+\par
+1 row in set (0.03 sec)\par
+\par
+mysql> select * from emp;\par
++-----+------------+--------------+--------+-------------+\par
+| eno | ename      | address      | salary | job_status  |\par
++-----+------------+--------------+--------+-------------+\par
+|   1 | abc        | Pune         |  50000 | Professor   |\par
+|   2 | abc        | Pune         |  45000 | Professor   |\par
+|   3 | P.Gupta    | Mumbai       |  40000 | Professor   |\par
+|   4 | Atharv     | Chennai      |  50000 | Teacher     |\par
+|   5 | Arpit      | MLK          |  50000 | HOD         |\par
+|   6 | sanket     | kolhapur     |  55000 | Teacher     |\par
+|   7 | sanket SSS | pune         |  45000 | Lab manager |\par
+|   8 | Joti       | UP           |  65000 | vice-HOD    |\par
+|   9 | Aarya      | KP           |  50000 | Teacher     |\par
+|  10 | Babalu     | Nashik       |  25000 | Research    |\par
+|  11 | Bhushan    | Mumbai       |   3000 | CR          |\par
+|  12 | xyz        | jabalpur     |  25000 | Research    |\par
+|  13 | john       | J&K          |   4000 | peon        |\par
+|  14 | joe        | UP           |   1000 | peon        |\par
+|  15 | Parth      | RAvivar peth |  35000 | Lab-manager |\par
++-----+------------+--------------+--------+-------------+\par
+15 rows in set (0.03 sec)\par
+\par
+mysql> create view sample as select ename, address from emp where address='Pune';\par
+Query OK, 0 rows affected (0.04 sec)\par
+\par
+mysql> select * from sample;\par
++------------+---------+\par
+| ename      | address |\par
++------------+---------+\par
+| abc        | Pune    |\par
+| abc        | Pune    |\par
+| sanket SSS | pune    |\par
++------------+---------+\par
+3 rows in set (0.00 sec)\par
+\par
+mysql> create view example as select ename, job_status from emp where job_status='Professor';\par
+Query OK, 0 rows affected (0.04 sec)\par
+\par
+mysql> select * from example;\par
++---------+------------+\par
+| ename   | job_status |\par
++---------+------------+\par
+| abc     | Professor  |\par
+| abc     | Professor  |\par
+| P.Gupta | Professor  |\par
++---------+------------+\par
+3 rows in set (0.00 sec)\par
+\par
+\par
+mysql> create or replace view sample as select ename, address from emp where address='Mumbai';\par
+Query OK, 0 rows affected (0.04 sec)\par
+\par
+mysql> select * from sample;\par
++---------+---------+\par
+| ename   | address |\par
++---------+---------+\par
+| P.Gupta | Mumbai  |\par
+| Bhushan | Mumbai  |\par
++---------+---------+\par
+2 rows in set (0.00 sec)\par
+\par
+mysql> create or replace view example as select ename, job_status from emp where job_status = 'Teacher';\par
+Query OK, 0 rows affected (0.04 sec)\par
+\par
+mysql> select * from example;\par
++--------+------------+\par
+| ename  | job_status |\par
++--------+------------+\par
+| Atharv | Teacher    |\par
+| sanket | Teacher    |\par
+| Aarya  | Teacher    |\par
++--------+------------+\par
+3 rows in set (0.00 sec)\par
+\par
+mysql> drop view sample;\par
+Query OK, 0 rows affected (0.07 sec)\par
+\par
+mysql> drop view example;\par
+Query OK, 0 rows affected (0.03 sec)\par
+\par
+mysql>\par
+\par
+\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412 
+\pard\intbl\widctlpar\sl300\slmult0\cf1 mysql>show databases;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +--------------------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Database           |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +--------------------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | ddl_commands       |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | dml_commands       |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | information_schema |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | mysql              |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | performance_schema |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | sakila             |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | sys                |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | world              |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +--------------------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 8 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 mysql> use dml_commands;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Database changed\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- Existing tables\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> show tables;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +------------------------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Tables_in_dml_commands |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +------------------------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | student_info           |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +------------------------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 1 row in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- Creating new tables\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- creating customer table\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> CREATE TABLE customer(\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> id INT PRIMARY KEY,\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> name VARCHAR(25) NOT NULL,\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> salary float NOT NULL\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> );\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Query OK, 0 rows affected (0.30 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- inserting values in Customer table\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> INSERT INTO customer VALUES (1,'Mohit',500000),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\tab ->  (2,'Ajay',250000),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     ->  (3,'Rutuja',350000),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     ->  (4,'Hemanshu',353240);\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Query OK, 4 rows affected (0.02 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Records: 4  Duplicates: 0  Warnings: 0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 mysql> SELECT * FROM customer;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | id | name     | salary |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    | 500000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     | 250000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   | 350000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu | 353240 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 4 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- creating orders table\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> CREATE TABLE orders(\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> order_id INT PRIMARY KEY,\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> customer_id INT REFERENCES customers,\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> amount INT NOT NULL\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> );\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Query OK, 0 rows affected (0.13 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- inserting values in orders table\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> INSERT INTO orders VALUES (1,2,200),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> (2,2,1200),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> (3,3,2300),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> (4,4,2100),\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell     -> (5,1,100);\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Query OK, 5 rows affected (0.02 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Records: 5  Duplicates: 0  Warnings: 0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 mysql> SELECT * FROM orders;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+-------------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | order_id | customer_id | amount |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+-------------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |        1 |           2 |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |        2 |           2 |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |        3 |           3 |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |        4 |           4 |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |        5 |           1 |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+-------------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 5 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- JOIN OPERATIONS\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- INNER JOIN\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT name,salary,amount FROM customer INNER JOIN orders ON customer.id = orders.customer_id;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | name     | salary | amount |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Rutuja   | 350000 |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Hemanshu | 353240 |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Mohit    | 500000 |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 5 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- LEFT JOIN\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT name,salary,amount FROM customer LEFT JOIN orders ON customer.id = orders.customer_id;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | name     | salary | amount |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Mohit    | 500000 |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Rutuja   | 350000 |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Hemanshu | 353240 |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 5 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- RIGHT JOIN\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT name,salary,amount FROM customer RIGHT JOIN orders ON customer.id = orders.customer_id;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | name     | salary | amount |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Rutuja   | 350000 |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Hemanshu | 353240 |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Mohit    | 500000 |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 5 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- FULL JOIN\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT name,salary,amount FROM customer FULL JOIN orders ON id = orders.customer_id;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | name     | salary | amount |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     | 250000 |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Rutuja   | 350000 |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Hemanshu | 353240 |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Mohit    | 500000 |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+--------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 5 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- SELF JOIN\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT a.id,b.name,a.salary FROM customer a, customer b WHERE a.salary > b.salary;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | id | name     | salary |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Ajay     | 500000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Ajay     | 350000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Ajay     | 353240 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Rutuja   | 500000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Rutuja   | 353240 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Hemanshu | 500000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 6 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- CARTESIAN OR CROSS JOIN\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT id,name,amount FROM customer,orders;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | id | name     | amount |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu |    200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu |   1200 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu |   2300 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu |   2100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu |    100 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 20 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- SUB QUERY OPERATION\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- SELECT\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> SELECT name FROM customer WHERE id IN (SELECT customer_id FROM orders);\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | name     |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Mohit    |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Ajay     |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Rutuja   |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | Hemanshu |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 4 rows in set (0.00 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 -- UPDATE\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell mysql> UPDATE customer SET salary=salary+1000 WHERE id IN (SELECT customer_id FROM orders);\cell\row\trowd\trgaph15\trrh348\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Query OK, 4 rows affected (0.02 sec)\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell Rows matched: 4  Changed: 4  Warnings: 0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\par
+
+\pard\intbl\widctlpar\sl300\slmult0\qr\cf0\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell\cf1 mysql> SELECT * FROM customer;\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell | id | name     | salary |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  1 | Mohit    | 501000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  2 | Ajay     | 251000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  3 | Rutuja   | 351000 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell |  4 | Hemanshu | 354240 |\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\clcbpat3\cellx1412\clcbpat3\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell +----+----------+--------+\cell\row\trowd\trgaph15\trpaddl15\trpaddr15\trpaddfl3\trpaddfr3
+\cellx1412\cellx9026 
+\pard\intbl\widctlpar\sl300\slmult0\cell 4 rows in set (0.00 sec)\cell\row 
+\pard\widctlpar\sa160\sl252\slmult1\cf0\par
+\f1\fs52 A4 pl sql\fs18\par
+
+\pard\widctlpar\b\f0\fs22 Table Creation: \par
+\b0 create table borrower_detail(Rollin int, Name varchar(15), DateofIssue date, NameofBook varchar(20), Status varchar(10)); \par
+Table created. \par
+SQL> create table fine_detail(Roll_no int,FineDate date,Amt int); Table created. \par
+\par
+\b PL/SQL Code: \par
+delimiter $\par
+\b0 SQL> edit fine declare \par
+roll_no number; \par
+name_of_book varchar(10);\par
+diff_date number; \par
+p_date date; \par
+i_date date; \par
+fine_amt real; \par
+begin roll_no:=&roll_no; \par
+name_of_book:='&name_of_book'; \par
+select dateofissue into i_date from Borrower_detail where rollin=roll_no; \par
+select sysdate - i_date into diff_date from dual; dbms_output.put_line(diff_date); \par
+if (diff_date>15 AND diff_date<30) then fine_amt:=diff_date*5; \par
+else fine_amt:=diff_date*50; end if; \par
+dbms_output.put_line('fine amt='||fine_amt); \par
+update Borrower_detail set status='r' where rollin=roll_no; if (fine_amt>0) then \par
+insert into Fine_detail values(roll_no,i_date,fine_amt); \par
+end if; \par
+end;\par
+\b $ \par
+\b0 / \par
+\par
+\b Data Insertion: \par
+\b0 SQL> insert into borrower_detail values(1001,'Vasuki','03-NOV-20','CPP','I'); 1 row created. \par
+SQL> insert into borrower_detail values(1002,'Ria','03-OCT-20','SEPM','I'); 1 row created. \par
+SQL> insert into borrower_detail values(1003,'Madhuri','01-DEC-20','DBMS','I'); 1 row created. \par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\b Output : \par
+\b0 SQL> @fine \par
+Enter value for roll_no: 1001 old 9: roll_no:=&roll_no; \par
+new 9: roll_no:=1001; \par
+Enter value for name_of_book: CPP \par
+old 10: name_of_book:='&name_of_book'; new 10: name_of_book:='CPP'; PL/SQL procedure successfully completed. \par
+SQL> select * from fine_detail; \par
+ROLL_NO FINEDATE AMT \par
+- - 1001 03-NOV-20 148 \par
+\par
+SQL> @fine \par
+Enter value for roll_no: 1002 old 9: roll_no:=&roll_no; \par
+new 9: roll_no:=1002; \par
+Enter value for name_of_book: SEPM \par
+old 10: name_of_book:='&name_of_book'; new 10: name_of_book:='SEPM'; PL/SQL procedure successfully completed. \par
+SQL> select * from fine_detail; \par
+ROLL_NO FINEDATE AMT \par
+- - \par
+1001 03-NOV-20 148 1002 03-OCT-20 3025 \par
+\par
+SQL> select * from borrower_detail; \par
+ROLLIN NAME DATEOFISS NAMEOFBOOK STATUS \par
+1001 Vasuki 03-NOV-20 CPP r \par
+1002 Ria 03-OCT-20 SEPM r \par
+1003 Madhuri 01-DEC-20 DBMS l\par
+\par
+\b PL/SQL Code: \par
+\b0 declare \par
+r1 number:=&r1; \par
+a1 number(14,2); \par
+value_out_of_bounds_exception exception; begin \par
+if r1>=5 and r1<=9 then a1 := 3.14*r1*r1; \par
+insert into areass values(r1,a1); \par
+else \par
+raise value_out_of_bounds_exception; \par
+end if; \par
+exception \par
+when value_out_of_bounds_exception then dbms_output.put_line('radius must be between 5 and 9.'); \par
+end; \par
+/ \par
+Output: \par
+SQL> set serverout on \par
+SQL> @ circle assignment Enter value for r1: 0 \par
+old 2: r1 number:=&r1; new 2: r1 number:=0; \par
+radius must be between 5 and 9. \par
+PL/SQL procedure successfully completed. \par
+SQL> @ circle assignment Enter value for r1: 6 \par
+old 2: r1 number:=&r1; new 2: r1 number:=6; \par
+PL/SQL procedure successfully completed.\par
+
+\pard\widctlpar\sa160\sl252\slmult1\f1\fs18\par
+\par
+\par
+\fs48 A5 procedure\par
+\par
+
+\pard\widctlpar\f0\fs22 CREATE TABLE stud_marks( name VARCHAR(20), \par
+total_marks NUMBER); \par
+INSERT INTO stud_marks VALUES('raj',89); \par
+INSERT INTO stud_marks VALUES('ram',94); \par
+INSERT INTO stud_marks VALUES('ramesh',95); \par
+CREATE TABLE results( roll_no NUMBER, name VARCHAR(20), \par
+class VARCHAR(20) \par
+); \par
+INSERT INTO stud_marks \par
+VALUES(1,'raj','TE'); \par
+INSERT INTO stud_marks VALUES(2,'ram','TE'); \par
+INSERT INTO stud_marks VALUES(3,'ramesh','TE'); \par
+\par
+\b PL/SQL Code: \par
+delimiter $\b0\par
+create or replace procedure proc_grade is marks number; \par
+s_name stud_marks.name%type := &name; \par
+s_marks stud_marks.total_marks%type; \par
+begin \par
+SELECT total_marks INTO s_marks FROM stud_marks WHERE name := s_name; \par
+if((s_marks<1500) and (s_marks>=990))then dbms_output.put_line('You have got distinction'); elsif((s_marks>=989) and (s_marks<=900))then dbms_output.put_line('You have got firstclass'); elsif((s_marks>=899) and (s_marks<=825))then dbms_output.put_line('You have got secondclass'); else \par
+dbms_output.put_line('Indeterminate'); end if; \par
+end; \par
+/ \par
+\b $\par
+\b0\par
+\b Output: \b0\par
+SQL> exec proc_grade(94,90,96); \par
+You have got Distinction with percent 93.33333333333333333333333333333333333333 \par
+PL/SQL procedure successfully completed. SQL> exec proc_grade (74,70,76); \par
+You have got First class with percent 73.33333333333333333333333333333333333333 \par
+PL/SQL procedure successfully completed.\par
+
+\pard\widctlpar\sa160\sl252\slmult1\f1\fs18\par
+
+\pard\sa200\sl276\slmult1\f3\fs22\lang9\par
+\fs72 a6 cursor\par
+
+\pard\widctlpar\f0\fs22\lang16393 SQL> create table new_class(roll int,name varchar(20)); Table created. \par
+SQL> create table old_class(roll int,name varchar(20)); Table created. \par
+SQL> edit c_class \par
+declare cursor c_class is select * from old_class; \par
+cursor c_chk(str_name varchar) is select roll from new_class where name=str_name; str_roll new_class.roll%type; \par
+str_name new_class.name%type; v varchar(10); \par
+begin open c_class; \par
+loop fetch c_class into str_roll,str_name; exit when c_class%notfound; \par
+open c_chk(str_name); \par
+fetch c_chk into v; if c_chk%found then dbms_output.put_line('Name '||str_name||' is exist'); \par
+else dbms_output.put_line('Name '||str_name||' does not exist. Inserting in new class table'); insert into new_class values(str_roll,str_name); \par
+end if; \par
+close c_chk; \par
+end loop; close c_class; end; \par
+/ \par
+SQL> select * from old_class; \par
+ROLL NAME \par
+- 101 AAA \par
+102 BBB \par
+103 CCC \par
+104 DDD \par
+\par
+SQL> select * from new_class; ROLL NAME \par
+101 AAA 102 BBB \par
+SQL> @c_class Name AAA is exist Name BBB is exist \par
+Name CCC does not exist. \par
+Inserting in new class table Name DDD does not exist. \par
+Inserting in new class table PL/SQL procedure successfully completed.\par
+
+\pard\sa200\sl276\slmult1\f3\fs72\lang9 A7 trigger\par
+
+\pard\widctlpar\f0\fs22\lang16393 SQL> set serverout on SQL> select*from Library; \par
+ROLL_NO ISSUE_DAT BOOK_NAME \par
+- - 11 13-OCT-21 Wings of Fire 21 23-SEP-21 India 2020 \par
+34 05-MAR-21 Ignited Minds \par
+40 10-JUL-21 The Discovery of India \par
+SQL> edit trigger_for_book SQL> edit Audit_book SQL> edit library_audit \par
+SQL> @library_audit Enter value for roll: 21 old 8: roll :=&roll; new 8: roll :=21; \par
+Enter value for bname: 'Deception Point' old 9: bname :=&bname; \par
+new 9: bname :='Deception Point'; Name of the new book:Deception Point Name of the old book:India 2020 \par
+PL/SQL procedure successfully completed. SQL> select*from Library_Audit_table; \par
+ROLL_NO ISSUE_DAT OLD_BOOK NEW_BOOK \par
+- - 21 20-OCT-21 India 2020 Deception Point \par
+SQL> select*from Library; \par
+ROLL_NO ISSUE_DAT BOOK_NAME \par
+- - 11 13-OCT-21 Wings of Fire 21 23-SEP-21 Deception Point 34 05-MAR-21 Ignited Minds \par
+40 10-JUL-21 The Da Vinci Code SQL> \par
+\par
+\b Trigger \par
+delimiter $\b0\par
+Declare \par
+roll number; new_date date; bname varchar(25); \par
+new_book varchar(25); old_book varchar(25); begin \par
+roll :=&roll; bname :=&bname; \par
+select book_name into old_book from Library where Roll_no =roll; update Library set book_name=bname where Roll_no =roll; \par
+select book_name into new_book from Library where Roll_no =roll; select sysdate into new_date from dual; \par
+insert into Library_Audit_table values(roll, new_date, old_book, new_book); \par
+end; \par
+/\par
+\b $\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\b0\f3\fs72\lang9 B1\par
+
+\pard\widctlpar\f0\fs22\lang16393\par
+\cf2\fs26 > use mydb \par
+switched to db mydb \cf0\par
+\cf2\b\par
+Create: \b0\par
+> db.createCollection ("Student"); \cf0\par
+\par
+\cf2\{ "ok": 1 \} \par
+> db.Student.insert(\{roll_no:1, name: 'atharva', branch: 'computer' \}); WriteResult(\{ "nInserted": 1 \}) \cf0\par
+\par
+\cf2\b Read: \b0\par
+>db.Student.find().pretty(); \par
+"_id" : ObjectId("619c880144d046e368d58709"), "roll_no": 1, \cf0\par
+\cf2 "name": "atharva", "branch": "computer" \cf0\par
+\cf2\b\par
+Update: \b0\par
+>db.Student.update(\{roll_no:1\},\{$set: \{brach: 'civil"\}\}); WriteResult(\{ "nMatched": 1, "nupserted": 0, "nModified": 1 \}) \cf0\par
+\cf2 >db.Student.find(); \par
+\{"_id" : ObjectId("619c880144d046e368d58709"), "roll_no": 1, "name": "atharva", "branch": "computer", "brach": "civil" \} \cf0\par
+\b\par
+Delete: \b0\par
+\cf2 >db.Student.remove(\{roll_no:1\}); \cf0 WriteResult(\{ "nRemoved" : 1 \})\fs22\par
+
+\pard\sa200\sl276\slmult1\f3\fs72\lang9\par
+B2 agg\par
+
+\pard\widctlpar\f0\fs22\lang16393 Create the collection Books having the following fields TITLE, DESCRIPTION, BY, URL, TAGS AND LIKES. Implement the following Aggregation and Indexing Queries \par
+1. Find the number of books published by kanetkar. \par
+2. Find books which have minimum likes and maximum likes published by kanetkar. \par
+3. Find the average number of likes of the books published by kanetkar. \par
+4. Find the first and last book published by kanetkar. \par
+5. Create an index on author name. Display the books published by john and check if it uses the index which we have created \par
+\par
+/******************************************************************** \par
+*****************************************************/ FIND THE NUMBER OF BOOKS PUBLISHED BY kanetkar \par
+> \par
+db.BOOKS.aggregate([\{$match:\{by:"kanetkar"\}\},\{$group:\{_id:"$by",no_of_docum ents:\{$sum:1\}\}\}]) \par
+\{ "_id" : "JOHN", "no_of_documents" : 2 \} \par
+/******************************************************************** \par
+******************************************************/ \par
+FIND BOOKS WHICH HAVE MINIMUM LIKES AND MAXIMUM LIKES PUBLISHED BY JOHN \par
+> \par
+db.BOOKS.aggregate([\{$match:\{by:"kanetkar"\}\},\{$group:\{_id:"$by",minimum_lik es:\{$min:"$likes"\}\}\}]) \par
+\{ "_id" : "JOHN", "minimum_likes" : 50 \} \par
+> \par
+db.BOOKS.aggregate([\{$match:\{by:"kanetkar"\}\},\{$group:\{_id:"$by",minimum_lik es:\{$max:"$likes"\}\}\}]) \par
+\{ "_id" : "JOHN", "minimum_likes" : 100 \} \par
+/******************************************************************** \par
+******************************************************/ \par
+FIND THE AVERAGE NUMBER OF LIKES OF THE BOOKS PUBLISHED BY kanetkar \par
+> \par
+db.BOOKS.aggregate([\{$match:\{by:"kanetkar"\}\},\{$group:\{_id:"$by",avg_likes:\{$a vg:"$likes"\}\}\}]) \par
+\{ "_id" : "JOHN", "avg_likes" : 75 \} \par
+/******************************************************************** \par
+******************************************************/ FIND THE FIRST AND LAST BOOK PUBLISHED BY JOHN \par
+db.BOOKS.aggregate([\{$match:\{by:"kanetkar"\}\},\{$group:\{_id:"$by",first_book:\{$f irst:"$title"\}\}\}]) \par
+\{ "_id" : "kanetkar", "first_book" : "C OVERVIEW" \} \par
+> \par
+db.BOOKS.aggregate([\{$match:\{by:"kanetkar"\}\},\{$group:\{_id:"$by",last_book:\{$l ast:"$title"\}\}\}]) \par
+\{ "_id" : "kanetkar", "last_book" : "Pointer in C" \} \par
+/******************************************************************** \par
+******************************************************/ CREATE AN INDEX ON AUTHOR NAME \par
+> \par
+db.BOOKS.ensureIndex(\{"by":1\}) \par
+\{ \par
+"createdCollectionAutomatically" : false, "numIndexesBefore" : 1, "numIndexesAfter" : 2, \par
+"ok" : 1 \par
+\} \par
+> \par
+db.BOOKS.createIndex(\{"by":1\}) \par
+\{ \par
+"createdCollectionAutomatically" : false, "numIndexesBefore" : 1, \par
+"numIndexesAfter" : 2, \par
+"ok" : 1 \par
+\}\par
+
+\pard\sa200\sl276\slmult1\f3\fs72\lang9 B3(MAP REDUCE)\par
+
+\pard\widctlpar\sa160\sl252\slmult1\f0\fs22\lang16393 > use ass3\par
+switched to db ass3\par
+> db.ass3.insert(\{roll:1, name:'navin', subject:oop, marks:78\})\par
+uncaught exception: ReferenceError: oop is not defined :\par
+@(shell):1:39\par
+>  db.ass3.insert(\{roll:1, name:'navin', subject:'oop', marks:78\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:2, name:'anusha', subject:'dsa', marks:75\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:3, name:'ravi', subject:'toc', marks:69\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:4, name:'veena', subject:'C++', marks:70\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:5, name:'pravin', subject:'CN', marks:80\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:6, name:'geeta', subject:'CN', marks:90\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.find()\par
+\{ "_id" : ObjectId("6352686908ee6c5c1c27c8af"), "roll" : 1, "name" : "navin", "subject" : "oop", "marks" : 78 \}\par
+\{ "_id" : ObjectId("635268be08ee6c5c1c27c8b0"), "roll" : 2, "name" : "anusha", "subject" : "dsa", "marks" : 75 \}\par
+\{ "_id" : ObjectId("635268e908ee6c5c1c27c8b1"), "roll" : 3, "name" : "ravi", "subject" : "toc", "marks" : 69 \}\par
+\{ "_id" : ObjectId("6352690b08ee6c5c1c27c8b2"), "roll" : 4, "name" : "veena", "subject" : "C++", "marks" : 70 \}\par
+\{ "_id" : ObjectId("6352692a08ee6c5c1c27c8b3"), "roll" : 5, "name" : "pravin", "subject" : "CN", "marks" : 80 \}\par
+\{ "_id" : ObjectId("6352694508ee6c5c1c27c8b4"), "roll" : 6, "name" : "geeta", "subject" : "CN", "marks" : 90 \}\par
+> var mapFunc = function()\{emit(this.subject,this.marks)\};\par
+> var mapFunc = function()\{emit(this.subject,this.marks);\}\par
+> var redFunc = function(key, values)\{\par
+... var marks=0;\par
+... for(var i=0;i<values.length;i++)\par
+... \{\par
+... var marks += this.marks;\par
+... \}\par
+... return marks;\par
+... \}\par
+uncaught exception: SyntaxError: unexpected token: '+=' :\par
+@(shell):5:10\par
+>  var redFunc = function(key, values)\{\par
+... var marks=0;\par
+... for(var i=0;i<values.length;i++)\par
+... marks += values[i];\par
+... return marks;\par
+... \}\par
+> db.ass3.mapReduce(mapFunc,redFunc,\{out:"total"\})\par
+\{ "result" : "total", "ok" : 1 \}\par
+> db.total.found()\par
+uncaught exception: TypeError: db.total.found is not a function :\par
+@(shell):1:1\par
+> db.total.find()\par
+\{ "_id" : "dsa", "value" : 75 \}\par
+\{ "_id" : "CN", "value" : 170 \}\par
+\{ "_id" : "toc", "value" : 69 \}\par
+\{ "_id" : "C++", "value" : 70 \}\par
+\{ "_id" : "oop", "value" : 78 \}\par
+> var redFunc = function(key, values)\{ return Array.sum(values)\}\par
+>  db.ass3.mapReduce(mapFunc,redFunc,\{out:"total1"\})\par
+\{ "result" : "total1", "ok" : 1 \}\par
+> db.total1.find()\par
+\{ "_id" : "dsa", "value" : 75 \}\par
+\{ "_id" : "CN", "value" : 170 \}\par
+\{ "_id" : "toc", "value" : 69 \}\par
+\{ "_id" : "C++", "value" : 70 \}\par
+\{ "_id" : "oop", "value" : 78 \}\par
+>\par
+\par
+\par
+
+\pard\widctlpar > use ass3\par
+switched to db ass3\par
+> db.ass3.insert(\{roll:1, name:'navin', subject:'oop', marks:78\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:2, name:'anusha', subject:'dsa', marks:75\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:3, name:'ravi', subject:'toc', marks:69\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:4, name:'veena', subject:'C++', marks:70\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:5, name:'pravin', subject:'CN', marks:80\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:6, name:'geeta', subject:'CN', marks:90\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.find()\par
+\{ "_id" : ObjectId("6352686908ee6c5c1c27c8af"), "roll" : 1, "name" : "navin",\par
+"subject" : "oop", "marks" : 78 \}\par
+\{ "_id" : ObjectId("635268be08ee6c5c1c27c8b0"), "roll" : 2, "name" : "anusha",\par
+"subject" : "dsa", "marks" : 75 \}\par
+\{ "_id" : ObjectId("635268e908ee6c5c1c27c8b1"), "roll" : 3, "name" : "ravi",\par
+"subject" : "toc", "marks" : 69 \}\par
+\{ "_id" : ObjectId("6352690b08ee6c5c1c27c8b2"), "roll" : 4, "name" : "veena",\par
+"subject" : "C++", "marks" : 70 \}\par
+\{ "_id" : ObjectId("6352692a08ee6c5c1c27c8b3"), "roll" : 5, "name" : "pravin",\par
+"subject" : "CN", "marks" : 80 \}\par
+\{ "_id" : ObjectId("6352694508ee6c5c1c27c8b4"), "roll" : 6, "name" : "geeta",\par
+"subject" : "CN", "marks" : 90 \}\par
+\{ "_id" : ObjectId("63526cc9d26f5de13d8059fd"), "roll" : 1, "name" : "navin",\par
+"subject" : "oop", "marks" : 78 \}\par
+\{ "_id" : ObjectId("63526cd3d26f5de13d8059fe"), "roll" : 2, "name" : "anusha",\par
+"subject" : "dsa", "marks" : 75 \}\par
+\{ "_id" : ObjectId("63526ceed26f5de13d8059ff"), "roll" : 3, "name" : "ravi",\par
+"subject" : "toc", "marks" : 69 \}\par
+\{ "_id" : ObjectId("63526cfbd26f5de13d805a00"), "roll" : 4, "name" : "veena",\par
+"subject" : "C++", "marks" : 70 \}\par
+\{ "_id" : ObjectId("63526d17d26f5de13d805a01"), "roll" : 5, "name" : "pravin",\par
+"subject" : "CN", "marks" : 80 \}\par
+\{ "_id" : ObjectId("63526d2bd26f5de13d805a02"), "roll" : 6, "name" : "geeta",\par
+"subject" : "CN", "marks" : 90 \}\par
+> var mapFunc = function()\{emit(this.subject,this.marks)\};\par
+> var mapFunc = function()\{emit(this.subject,this.marks);\}\par
+> var redFunc = function(key, values)\{ return Array.sum(values)\}\par
+> db.ass3.mapReduce(mapFunc,redFunc,\{out:"total1"\})\par
+\{ "result" : "total1", "ok" : 1 \}\par
+> db.total1.find()\par
+\{ "_id" : "toc", "value" : 138 \}\par
+\{ "_id" : "C++", "value" : 140 \}\par
+\{ "_id" : "oop", "value" : 156 \}\par
+\{ "_id" : "dsa", "value" : 150 \}\par
+\{ "_id" : "CN", "value" : 340 \}\par
+
+\pard\widctlpar\sa160\sl252\slmult1\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\fs28 > use ass3\par
+switched to db ass3\par
+> db.ass3.insert(\{roll:1, name:'navin', subject:'oop', marks:78\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:2, name:'anusha', subject:'dsa', marks:75\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:3, name:'ravi', subject:'toc', marks:69\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:4, name:'veena', subject:'C++', marks:70\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:5, name:'pravin', subject:'CN', marks:80\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.insert(\{roll:6, name:'geeta', subject:'CN', marks:90\})\par
+WriteResult(\{ "nInserted" : 1 \})\par
+> db.ass3.find()\par
+\{ "_id" : ObjectId("6352686908ee6c5c1c27c8af"), "roll" : 1, "name" : "navin", "subject" : "oop", "marks" : 78 \}\par
+\{ "_id" : ObjectId("635268be08ee6c5c1c27c8b0"), "roll" : 2, "name" : "anusha", "subject" : "dsa", "marks" : 75 \}\par
+\{ "_id" : ObjectId("635268e908ee6c5c1c27c8b1"), "roll" : 3, "name" : "ravi", "subject" : "toc", "marks" : 69 \}\par
+\{ "_id" : ObjectId("6352690b08ee6c5c1c27c8b2"), "roll" : 4, "name" : "veena", "subject" : "C++", "marks" : 70 \}\par
+\{ "_id" : ObjectId("6352692a08ee6c5c1c27c8b3"), "roll" : 5, "name" : "pravin", "subject" : "CN", "marks" : 80 \}\par
+\{ "_id" : ObjectId("6352694508ee6c5c1c27c8b4"), "roll" : 6, "name" : "geeta", "subject" : "CN", "marks" : 90 \}\par
+\{ "_id" : ObjectId("63526cc9d26f5de13d8059fd"), "roll" : 1, "name" : "navin", "subject" : "oop", "marks" : 78 \}\par
+\{ "_id" : ObjectId("63526cd3d26f5de13d8059fe"), "roll" : 2, "name" : "anusha", "subject" : "dsa", "marks" : 75 \}\par
+\{ "_id" : ObjectId("63526ceed26f5de13d8059ff"), "roll" : 3, "name" : "ravi", "subject" : "toc", "marks" : 69 \}\par
+\{ "_id" : ObjectId("63526cfbd26f5de13d805a00"), "roll" : 4, "name" : "veena", "subject" : "C++", "marks" : 70 \}\par
+\{ "_id" : ObjectId("63526d17d26f5de13d805a01"), "roll" : 5, "name" : "pravin", "subject" : "CN", "marks" : 80 \}\par
+\{ "_id" : ObjectId("63526d2bd26f5de13d805a02"), "roll" : 6, "name" : "geeta", "subject" : "CN", "marks" : 90 \}\par
+> var mapFunc = function()\{emit(this.subject,this.marks)\};\par
+> var mapFunc = function()\{emit(this.subject,this.marks);\}\par
+> var redFunc = function(key, values)\{ return Array.sum(values)\}\par
+> db.ass3.mapReduce(mapFunc,redFunc,\{out:"total1"\})\par
+\{ "result" : "total1", "ok" : 1 \}\par
+> db.total1.find()\par
+\{ "_id" : "toc", "value" : 138 \}\par
+\{ "_id" : "C++", "value" : 140 \}\par
+\{ "_id" : "oop", "value" : 156 \}\par
+\{ "_id" : "dsa", "value" : 150 \}\par
+\{ "_id" : "CN", "value" : 340 \}\par
+\par
+
+\pard\sa200\sl276\slmult1\f3\fs72\lang9 B4(CONNECTIVITY)\par
+
+\pard\widctlpar\sa160\sl252\slmult1\f0\fs22\lang16393 Create employee array objects containing employee id,name,designation,salary using json and write a program in python to read and display employee information. \par
+\b JSON.py \par
+\b0 import json with open('dbms.json') as f: \par
+data = json.load(f) def main(): \par
+def displayAll(): \par
+for i in range(len(data["Employee"])): \par
+for j,k in data["Employee"][i].items(): \par
+print(j," : ",k) print('\\n') \par
+return('Total Number of Records are \{\}'.format(len(data["Employee"]))) def displayById(): \par
+id_ = int(input('Enter the id')) flag = 0 \par
+for i in range(len(data["Employee"])): if data["Employee"][i]["id"] == id_: flag = 1 \par
+for j,k in data["Employee"][i].items(): print(j," : ",k) \par
+print('\\n') \par
+return('Record Not Present \\n\\n ') if flag == 0 \par
+else ('Record Present') def insertNewRecord(): \par
+global data newRecord = \{\} listOfIds = [i["id"] \par
+for i in data["Employee"]] \par
+id_= int(input('Enter the id number\\n ')) if id_ in listOfIds: \par
+return('Id Already Present\\n ') else: \par
+newRecord["id"] = id_ \par
+newRecord["name"] = input('Enter the name') newRecord["designation"] = input('Enter the Designation') newRecord["salary"] = int(input('Enter the Salary of the Employee')) newRecord["hobbies"] = input('Enter the hobbies\\n').split() \par
+with open('dbms.json','w') as f1: data['Employee'].append(newRecord) json.dump(data,f1,indent=4) return('Record Inserted Successfully\\n') boolvalue = True \par
+while boolvalue: \par
+print('1. To display all data') print('2. To display by id') print('3. To insert a new Data') ch = input() \par
+print('\\n') switcher = \{ \par
+"1":displayAll, "2":displayById, "3":insertNewRecord \par
+\} \par
+try: \par
+fun = switcher[ch] print(fun()) \par
+except TypeError: \par
+print('Enter a valid choice\\n ') \par
+choice = input('Do you want to continue Y/N') boolvalue = True if choice in ['y','Y'] else False main() \par
+dbms.json \par
+\{ \par
+"Employee": [ \par
+\{ \par
+"id": 1, \par
+"name": "vaibhav", "designation": "Developer", "salary": 45000, \par
+"hobbies": [ "playing Cricket", "chess" ] \par
+\}, \par
+\{ \par
+"id": 56, \par
+"name": "suyash", "designation": "android dev", \par
+"salary": 56000, "hobbies": [ \par
+"cricket,", \par
+"meme" ] \par
+\}\par
+
+\pard\sa200\sl276\slmult1\f3\fs72\lang9\par
+\par
+\par
+\par
+\fs48\par
+\fs22\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
